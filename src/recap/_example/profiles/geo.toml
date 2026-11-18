@@ -1,0 +1,12 @@
+id = "geo"
+version = 1
+kind = "ranked"
+prompt_versions = ["eo-assistant@1"]
+entities = ["example:aurora-1"]
+scope = ["global", "US"]
+deny = ["live_weather"]
+min_score = 0.55
+budget = 192
+
+[topics]
+earth_observation = 1.0

@@ -1,0 +1,10 @@
+# RECAP example configuration. Every source, product and mission here is
+# fictional, and every URL uses the reserved example.org domain.
+db = "recap.db"
+sources = "sources.toml"
+models = "models.toml"
+profiles_dir = "profiles"
+
+[settings]
+deadline_ms = 40
+safety_margin_tokens = 64

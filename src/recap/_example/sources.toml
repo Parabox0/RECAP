@@ -1,0 +1,94 @@
+# Source registry. Every source is explicitly enrolled: facts from a source
+# that is removed from this file stop being served.
+
+[[source]]
+id = "lumen-releases"
+adapter = "atom"
+class = "deterministic"
+url = "https://releases.example.org/lumen/feed.atom"
+permitted_origins = ["https://releases.example.org"]
+permitted_paths = ["/lumen/"]
+fact_types = ["release"]
+jurisdictions = ["global"]
+poll_interval_minutes = 30
+max_evidence_age_hours = 168
+parser_version = "atom-1"
+authority = "primary"
+attests_current = true
+topics = ["3d_graphics", "software_releases"]
+coverage_start = "2026-05-22"
+
+[source.options]
+entity = "example:lumen"
+entity_label = "Lumen"
+title_pattern = '^Lumen (?P<version>\d+\.\d+\.\d+)(?: (?P<channel>beta|rc))?$'
+default_channel = "stable"
+channel_map = { rc = "release-candidate" }
+highlights = "review"
+
+[[source]]
+id = "quill-pypi"
+adapter = "pypi"
+class = "deterministic"
+url = "https://pypi.example.org/pypi/quill/json"
+permitted_origins = ["https://pypi.example.org"]
+permitted_paths = ["/pypi/quill/", "/project/quill/"]
+fact_types = ["release"]
+poll_interval_minutes = 30
+max_evidence_age_hours = 168
+parser_version = "pypi-1"
+authority = "primary"
+attests_current = true
+topics = ["python_packages", "software_releases"]
+
+[source.options]
+entity = "example:quill"
+entity_label = "Quill"
+project_url = "https://pypi.example.org/project/quill/{version}/"
+
+[[source]]
+id = "aurora-status"
+adapter = "json_status"
+class = "deterministic"
+url = "https://status.example.org/missions/aurora.json"
+permitted_origins = ["https://status.example.org"]
+permitted_paths = ["/missions/"]
+fact_types = ["status"]
+jurisdictions = ["global"]
+poll_interval_minutes = 180
+max_evidence_age_hours = 48
+parser_version = "status-1"
+authority = "primary"
+attests_current = true
+topics = ["earth_observation"]
+
+[source.options]
+items_path = "updates"
+id_field = "id"
+status_field = "status"
+status_map = { NOMINAL = "nominal", SAFE_MODE = "safe mode", DEGRADED = "degraded" }
+entity = "example:aurora-1"
+entity_label = "Aurora-1"
+component_field = "instrument"
+component_map = { IMG = "imager", RAD = "radiometer" }
+effective_field = "effective"
+published_field = "published"
+updated_field = "updated"
+state_field = "state"
+state_map = { current = "active", planned = "scheduled" }
+complete = true
+
+[[source]]
+id = "lumen-policy"
+adapter = "review_page"
+class = "review"
+url = "https://releases.example.org/lumen/policy.html"
+permitted_origins = ["https://releases.example.org"]
+permitted_paths = ["/lumen/"]
+fact_types = ["deprecation", "removal"]
+poll_interval_minutes = 180
+max_evidence_age_hours = 168
+parser_version = "page-1"
+authority = "primary"
+topics = ["3d_graphics", "software_releases"]
+entities = ["example:lumen"]

@@ -1,0 +1,7 @@
+# The general profile carries at most two editor-designated changes, and
+# often none. Editors add picks with `recap editorial add general <fact_id>`.
+id = "general"
+version = 1
+kind = "editorial"
+max_editorial = 2
+budget = 192
