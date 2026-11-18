@@ -1,0 +1,24 @@
+# Model registry. knowledge_through is an operator-declared, conservative
+# training cutoff; it anchors the eligibility window.
+
+[[model]]
+id = "example-model"
+knowledge_through = "2026-06-30"
+counting = "byte_bound"     # guaranteed upper bound for byte-level tokenizers
+serializer_version = "v1"
+framing_overhead = 8
+
+[[model]]
+id = "example-model-calibrated"
+knowledge_through = "2026-06-30"
+counting = "calibrated"
+serializer_version = "v1"
+
+[model.calibration]
+# Illustrative values only. Fit your own with `recap calibrate` against
+# the provider's token counts before serving real traffic.
+alpha = 1.1
+beta = 1.0
+gamma = 12
+margin = 0.05
+version = "example-not-for-production"

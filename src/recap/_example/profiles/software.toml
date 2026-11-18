@@ -1,0 +1,14 @@
+id = "software"
+version = 1
+kind = "ranked"
+prompt_versions = ["software-assistant@1"]
+entities = ["example:lumen", "example:quill"]
+scope = ["global"]
+deny = []
+min_score = 0.55
+budget = 192
+
+[topics]
+software_releases = 1.0
+3d_graphics = 0.8
+python_packages = 0.7

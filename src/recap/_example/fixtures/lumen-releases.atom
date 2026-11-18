@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Lumen releases (fictional)</title>
+  <id>tag:releases.example.org,2026:lumen</id>
+  <updated>2026-11-10T14:00:00Z</updated>
+  <link rel="self" href="https://releases.example.org/lumen/feed.atom"/>
+  <entry>
+    <id>tag:releases.example.org,2026:lumen-5.3.0</id>
+    <title>Lumen 5.3.0</title>
+    <published>2026-11-10T14:00:00Z</published>
+    <updated>2026-11-10T14:00:00Z</updated>
+    <link rel="alternate" href="https://releases.example.org/lumen/5.3.0/"/>
+    <summary type="html">&lt;p&gt;Lumen 5.3.0 adds native Gaussian-splat import and a faster viewport.&lt;/p&gt;</summary>
+  </entry>
+  <entry>
+    <id>tag:releases.example.org,2026:lumen-5.3.0-beta</id>
+    <title>Lumen 5.3.0 beta</title>
+    <published>2026-10-20T09:00:00Z</published>
+    <updated>2026-10-20T09:00:00Z</updated>
+    <link rel="alternate" href="https://releases.example.org/lumen/5.3.0-beta/"/>
+  </entry>
+  <entry>
+    <id>tag:releases.example.org,2026:lumen-5.2.1</id>
+    <title>Lumen 5.2.1</title>
+    <published>2026-08-20T10:00:00Z</published>
+    <updated>2026-08-20T10:00:00Z</updated>
+    <link rel="alternate" href="https://releases.example.org/lumen/5.2.1/"/>
+  </entry>
+  <entry>
+    <id>tag:releases.example.org,2026:lumen-5.2.0</id>
+    <title>Lumen 5.2.0</title>
+    <published>2026-07-15T10:00:00Z</published>
+    <updated>2026-07-15T10:00:00Z</updated>
+    <link rel="alternate" href="https://releases.example.org/lumen/5.2.0/"/>
+  </entry>
+  <entry>
+    <id>tag:releases.example.org,2026:lumen-blog-roadmap</id>
+    <title>Looking ahead: the Lumen roadmap</title>
+    <published>2026-09-01T10:00:00Z</published>
+    <updated>2026-09-01T10:00:00Z</updated>
+    <link rel="alternate" href="https://releases.example.org/lumen/blog/roadmap/"/>
+  </entry>
+</feed>
